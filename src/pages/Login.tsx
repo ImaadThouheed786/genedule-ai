@@ -21,14 +21,8 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted relative overflow-hidden">
-      {/* AI Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-ai-primary opacity-10 rounded-full blur-3xl animate-ai-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-neural opacity-10 rounded-full blur-3xl animate-ai-pulse" style={{ animationDelay: "1s" }} />
-      </div>
-
-      <div className="relative z-10 flex items-center justify-center min-h-screen p-4">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+      <div className="flex items-center justify-center min-h-screen p-4">
         <div className="w-full max-w-md space-y-8">
           {/* Header */}
           <div className="text-center space-y-4">
@@ -39,11 +33,8 @@ const Login = () => {
             </div>
             <div>
               <h1 className="text-3xl font-bold bg-gradient-ai-primary bg-clip-text text-transparent">
-                AI TeachLearn
+                Welcome
               </h1>
-              <p className="text-muted-foreground mt-2">
-                Intelligent Teaching & Learning Platform
-              </p>
             </div>
           </div>
 

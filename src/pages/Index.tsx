@@ -6,15 +6,8 @@ const Index = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted relative overflow-hidden">
-      {/* AI Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-ai-primary opacity-5 rounded-full blur-3xl animate-ai-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-neural opacity-5 rounded-full blur-3xl animate-ai-pulse" style={{ animationDelay: "1s" }} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-ai-secondary opacity-3 rounded-full blur-3xl animate-neural-flow" />
-      </div>
-
-      <div className="relative z-10 flex items-center justify-center min-h-screen p-4">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+      <div className="flex items-center justify-center min-h-screen p-4">
         <div className="text-center space-y-12 max-w-4xl mx-auto">
           {/* Hero Section */}
           <div className="space-y-6">
@@ -26,11 +19,8 @@ const Index = () => {
             
             <div className="space-y-4">
               <h1 className="text-6xl md:text-7xl font-bold bg-gradient-ai-primary bg-clip-text text-transparent leading-tight">
-                AI TeachLearn
+                Welcome
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Revolutionize education with AI-powered course creation and intelligent learning experiences
-              </p>
             </div>
           </div>
 
