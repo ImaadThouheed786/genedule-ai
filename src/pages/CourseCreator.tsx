@@ -410,11 +410,61 @@ const CourseCreator = () => {
                             ))}
                           </div>
 
-                          <div className="space-y-2">
+                          <div className="space-y-3">
                             <Label className="text-sm font-medium">Quiz Questions ({weekData.quiz.length})</Label>
-                            <div className="text-xs text-muted-foreground bg-muted/50 p-2 rounded">
-                              {weekData.quiz.length} questions generated
-                            </div>
+                            {weekData.quiz.map((quiz, index) => (
+                              <div key={index} className="p-3 bg-muted rounded-lg space-y-3">
+                                <Textarea
+                                  value={quiz.question}
+                                  onChange={(e) => {
+                                    const updatedQuiz = [...weekData.quiz];
+                                    updatedQuiz[index] = { ...quiz, question: e.target.value };
+                                    setGeneratedCourse(prev => ({
+                                      ...prev,
+                                      [weekKey]: {
+                                        ...prev[weekKey],
+                                        quiz: updatedQuiz
+                                      }
+                                    }));
+                                  }}
+                                  className="text-sm font-medium bg-background"
+                                  placeholder="Quiz question"
+                                  rows={2}
+                                />
+                                <div className="space-y-2">
+                                  <Label className="text-xs text-muted-foreground">Options</Label>
+                                  {quiz.options.map((option, optionIndex) => (
+                                    <div
+                                      key={optionIndex}
+                                      className={`p-2 rounded text-xs border ${
+                                        option === quiz.answer
+                                          ? 'bg-gradient-ai-primary/20 border-primary text-primary font-medium'
+                                          : 'bg-background border-border'
+                                      }`}
+                                    >
+                                      <Input
+                                        value={option}
+                                        onChange={(e) => {
+                                          const updatedQuiz = [...weekData.quiz];
+                                          const updatedOptions = [...quiz.options];
+                                          updatedOptions[optionIndex] = e.target.value;
+                                          updatedQuiz[index] = { ...quiz, options: updatedOptions };
+                                          setGeneratedCourse(prev => ({
+                                            ...prev,
+                                            [weekKey]: {
+                                              ...prev[weekKey],
+                                              quiz: updatedQuiz
+                                            }
+                                          }));
+                                        }}
+                                        className="text-xs bg-transparent border-none p-0 h-auto"
+                                        placeholder={`Option ${optionIndex + 1}`}
+                                      />
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
                           </div>
 
                           <Separator />
