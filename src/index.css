@@ -2,41 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* AI-Driven Teaching Platform Design System
+   Modern gradients, AI-inspired colors, and beautiful animations
+   All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core AI brand colors */
+    --background: 240 20% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card system */
+    --card: 240 15% 9%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Interactive elements */
+    --popover: 240 15% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* AI Primary - Electric Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 217 91% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* AI Secondary - Neural Purple */
+    --secondary: 260 60% 45%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted elements */
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Bright Cyan */
+    --accent: 180 100% 50%;
+    --accent-foreground: 240 20% 6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success - Neural Green */
+    --success: 142 69% 58%;
+    --success-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Warning - AI Orange */
+    --warning: 25 95% 53%;
+    --warning-foreground: 0 0% 98%;
 
-    --radius: 0.5rem;
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Form elements */
+    --border: 240 10% 20%;
+    --input: 240 10% 18%;
+    --ring: 217 91% 60%;
+
+    /* Gradients */
+    --gradient-ai-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(260 60% 45%));
+    --gradient-ai-secondary: linear-gradient(135deg, hsl(180 100% 50%), hsl(217 91% 70%));
+    --gradient-neural: linear-gradient(45deg, hsl(260 60% 45%), hsl(142 69% 58%));
+    --gradient-learning: linear-gradient(135deg, hsl(25 95% 53%), hsl(0 84% 60%));
+    
+    /* Shadows and glows */
+    --shadow-ai: 0 10px 40px -10px hsl(217 91% 60% / 0.3);
+    --shadow-neural: 0 20px 60px -15px hsl(260 60% 45% / 0.4);
+    --glow-primary: 0 0 30px hsl(217 91% 60% / 0.5);
+
+    /* Animations */
+    --transition-ai: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s ease-out;
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 

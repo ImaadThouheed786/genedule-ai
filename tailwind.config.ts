@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,6 +53,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +71,17 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-ai-primary': 'var(--gradient-ai-primary)',
+				'gradient-ai-secondary': 'var(--gradient-ai-secondary)',
+				'gradient-neural': 'var(--gradient-neural)',
+				'gradient-learning': 'var(--gradient-learning)'
+			},
+			boxShadow: {
+				'ai': 'var(--shadow-ai)',
+				'neural': 'var(--shadow-neural)',
+				'glow': 'var(--glow-primary)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +104,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'ai-pulse': {
+					'0%, 100%': { 
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': { 
+						opacity: '0.8',
+						transform: 'scale(1.05)'
+					}
+				},
+				'neural-flow': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'ai-pulse': 'ai-pulse 2s ease-in-out infinite',
+				'neural-flow': 'neural-flow 3s ease-in-out infinite'
+			},
+			transitionTimingFunction: {
+				'ai': 'cubic-bezier(0.4, 0, 0.2, 1)'
 			}
 		}
 	},
