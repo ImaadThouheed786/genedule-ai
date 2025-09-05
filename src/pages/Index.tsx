@@ -53,19 +53,28 @@ const Index = () => {
 
           {/* CTA */}
           <div className="space-y-6">
-            <Button 
-              onClick={() => navigate("/login")}
-              variant="ai"
-              size="xl"
-              className="gap-3 text-lg px-12 py-6"
-            >
-              <Sparkles className="h-6 w-6" />
-              Get Started
-              <ArrowRight className="h-5 w-5" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                variant="ai"
+                onClick={() => navigate("/login")}
+                className="text-lg px-8 py-4 h-auto"
+              >
+                <Sparkles className="h-5 w-5 mr-2" />
+                Start Coding
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                onClick={() => navigate("/dashboard")}
+                className="text-lg px-8 py-4 h-auto border-primary/20 hover:bg-primary/5"
+              >
+                View Projects
+              </Button>
+            </div>
             
             <p className="text-sm text-muted-foreground">
-              Experience the future of education with artificial intelligence
+              Learn to code with Python and Web Development
             </p>
           </div>
         </div>
